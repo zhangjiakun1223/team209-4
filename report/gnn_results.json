@@ -1,0 +1,125 @@
+{
+  "graph": {
+    "merchants": 800,
+    "customers": 24626,
+    "devices": 349,
+    "buy_edges": 154016,
+    "device_edges": 1007
+  },
+  "results": {
+    "纯GNN（仅图结构）": {
+      "test": {
+        "auc": 0.856,
+        "ks": 0.693,
+        "pr_auc": 0.8237
+      },
+      "top25pct": {
+        "k": 73,
+        "recall": 0.7391,
+        "precision": 0.6986,
+        "lift": 2.94
+      },
+      "best_epoch": 289,
+      "train_auc": 0.9338
+    },
+    "GNN+表格特征（混合）": {
+      "test": {
+        "auc": 0.9177,
+        "ks": 0.7826,
+        "pr_auc": 0.8861
+      },
+      "top25pct": {
+        "k": 73,
+        "recall": 0.7971,
+        "precision": 0.7534,
+        "lift": 3.17
+      },
+      "best_epoch": 84,
+      "train_auc": 1.0
+    },
+    "逻辑回归（表格基线）": {
+      "test": {
+        "auc": 0.9284,
+        "ks": 0.8216,
+        "pr_auc": 0.9082
+      },
+      "top25pct": {
+        "k": 73,
+        "recall": 0.8406,
+        "precision": 0.7945,
+        "lift": 3.34
+      }
+    },
+    "LightGBM（表格基线）": {
+      "test": {
+        "auc": 0.9341,
+        "ks": 0.808,
+        "pr_auc": 0.9096
+      },
+      "top25pct": {
+        "k": 73,
+        "recall": 0.8261,
+        "precision": 0.7808,
+        "lift": 3.28
+      }
+    },
+    "孤立森林（无监督基线）": {
+      "test": {
+        "auc": 0.7665,
+        "ks": 0.4169,
+        "pr_auc": 0.5658
+      },
+      "top25pct": {
+        "k": 73,
+        "recall": 0.5217,
+        "precision": 0.4932,
+        "lift": 2.07
+      }
+    },
+    "逻辑回归+团伙结构": {
+      "test": {
+        "auc": 0.9236,
+        "ks": 0.817,
+        "pr_auc": 0.9054
+      },
+      "top25pct": {
+        "k": 73,
+        "recall": 0.8406,
+        "precision": 0.7945,
+        "lift": 3.34
+      }
+    },
+    "LightGBM+团伙结构": {
+      "test": {
+        "auc": 0.9214,
+        "ks": 0.8116,
+        "pr_auc": 0.9039
+      },
+      "top25pct": {
+        "k": 73,
+        "recall": 0.8261,
+        "precision": 0.7808,
+        "lift": 3.28
+      }
+    },
+    "仅设备共享结构信号": {
+      "test": {
+        "auc": 0.8438,
+        "ks": 0.6875,
+        "pr_auc": 0.7134
+      },
+      "top25pct": {
+        "k": 73,
+        "recall": 0.7681,
+        "precision": 0.726,
+        "lift": 3.05
+      },
+      "覆盖商户数": 163,
+      "命中率": 0.7117
+    }
+  },
+  "tab_baseline_cv": {
+    "auc_mean": 0.8911,
+    "auc_std": 0.0506
+  }
+}

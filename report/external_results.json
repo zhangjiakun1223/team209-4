@@ -1,0 +1,82 @@
+[
+  {
+    "dataset": "BAF(NeurIPS2022)",
+    "auc": 0.8779,
+    "auprc": 0.1581,
+    "ks": 0.6059,
+    "top5pct_precision": 0.1331,
+    "top5pct_recall": 0.4739,
+    "lift": 9.48,
+    "model": "逻辑回归"
+  },
+  {
+    "dataset": "BAF(NeurIPS2022)",
+    "auc": 0.8688,
+    "auprc": 0.1355,
+    "ks": 0.5793,
+    "top5pct_precision": 0.1254,
+    "top5pct_recall": 0.4465,
+    "lift": 8.93,
+    "model": "随机森林"
+  },
+  {
+    "dataset": "BAF(NeurIPS2022)",
+    "auc": 0.8861,
+    "auprc": 0.1887,
+    "ks": 0.615,
+    "top5pct_precision": 0.1409,
+    "top5pct_recall": 0.5017,
+    "lift": 10.03,
+    "model": "LightGBM（类别权重）"
+  },
+  {
+    "dataset": "BAF(NeurIPS2022)",
+    "auc": 0.8897,
+    "auprc": 0.1793,
+    "ks": 0.6205,
+    "top5pct_precision": 0.1437,
+    "top5pct_recall": 0.5118,
+    "lift": 10.24,
+    "model": "LightGBM（默认）"
+  },
+  {
+    "dataset": "ULB信用卡欺诈",
+    "auc": 0.9788,
+    "auprc": 0.767,
+    "ks": 0.868,
+    "top5pct_precision": 0.0229,
+    "top5pct_recall": 0.9074,
+    "lift": 18.14,
+    "model": "逻辑回归"
+  },
+  {
+    "dataset": "ULB信用卡欺诈",
+    "auc": 0.9812,
+    "auprc": 0.8244,
+    "ks": 0.8733,
+    "top5pct_precision": 0.0227,
+    "top5pct_recall": 0.8981,
+    "lift": 17.96,
+    "model": "随机森林"
+  },
+  {
+    "dataset": "ULB信用卡欺诈",
+    "auc": 0.8741,
+    "auprc": 0.0199,
+    "ks": 0.7482,
+    "top5pct_precision": 0.0199,
+    "top5pct_recall": 0.787,
+    "lift": 15.74,
+    "model": "LightGBM（类别权重）"
+  },
+  {
+    "dataset": "ULB信用卡欺诈",
+    "auc": 0.9838,
+    "auprc": 0.7873,
+    "ks": 0.8602,
+    "top5pct_precision": 0.0227,
+    "top5pct_recall": 0.8981,
+    "lift": 17.96,
+    "model": "LightGBM（默认）"
+  }
+]

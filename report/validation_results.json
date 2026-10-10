@@ -1,0 +1,91 @@
+{
+  "assumptions": {
+    "limit_factor": 1.5,
+    "limit_cap": 1000000,
+    "PD": 0.08,
+    "LGD": 0.6
+  },
+  "test_sample": 290,
+  "results": {
+    "baseline": {
+      "total_limit_before": 2140.4,
+      "excess_before_w": 256.3,
+      "review_share": 1.0,
+      "review_n": 290,
+      "excess_intercept_rate": 0.0,
+      "exposure_reduction_w": 0.0,
+      "compliant_limit_change_w": 0.0
+    },
+    "policy_A_score_threshold": {
+      "total_limit_before": 2140.4,
+      "total_limit_after": 1884.0,
+      "review_share": 0.2759,
+      "review_n": 80,
+      "flagged_precision": 0.7375,
+      "flagged_recall": 0.8551,
+      "excess_before_w": 256.3,
+      "excess_after_w": 0.0,
+      "excess_intercept_rate": 1.0,
+      "compliant_limit_change_w": 0.0,
+      "exposure_reduction_w": 12.3
+    },
+    "policy_B_top25_rank": {
+      "total_limit_before": 2140.4,
+      "total_limit_after": 1884.0,
+      "review_share": 0.2759,
+      "review_n": 80,
+      "flagged_precision": 0.7375,
+      "flagged_recall": 0.8551,
+      "excess_before_w": 256.3,
+      "excess_after_w": 0.0,
+      "excess_intercept_rate": 1.0,
+      "compliant_limit_change_w": 0.0,
+      "exposure_reduction_w": 12.3
+    }
+  },
+  "layer_table": [
+    {
+      "limit_bin": "5万以下",
+      "商户数": 160.0,
+      "非规范商户数": 29.0,
+      "虚高额度(万元)": 12.1
+    },
+    {
+      "limit_bin": "5-10万",
+      "商户数": 67.0,
+      "非规范商户数": 14.0,
+      "虚高额度(万元)": 24.2
+    },
+    {
+      "limit_bin": "10-30万",
+      "商户数": 54.0,
+      "非规范商户数": 21.0,
+      "虚高额度(万元)": 109.3
+    },
+    {
+      "limit_bin": "30-100万",
+      "商户数": 9.0,
+      "非规范商户数": 5.0,
+      "虚高额度(万元)": 110.7
+    }
+  ],
+  "monthly_auc": [
+    {
+      "apply_month": "2026-06",
+      "商户数": 95.0,
+      "AUC": 0.9208
+    },
+    {
+      "apply_month": "2026-07",
+      "商户数": 94.0,
+      "AUC": 0.9338
+    },
+    {
+      "apply_month": "2026-08",
+      "商户数": 101.0,
+      "AUC": 0.9275
+    }
+  ],
+  "median_excess_ratio_fake": 0.1558,
+  "median_excess_ratio_visible_fake": 0.237
+}

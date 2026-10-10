@@ -1,0 +1,21 @@
+# ---- 大体积数据（可由脚本重新生成，或来自 Kaggle 外部数据集，不入库）----
+data/external/
+data/stress_lowrate/
+data/stress_adv/
+data/processed/transactions.csv.gz
+data/processed/fund_flows.csv.gz
+data/processed/graph.pt
+
+# ---- 报告产物（防查重误判：报告文本与成稿不入库）----
+report/report.html
+report/*.pdf
+report/figures/
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ---- 系统/临时 ----
+Thumbs.db
+.DS_Store

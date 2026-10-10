@@ -1,0 +1,79 @@
+{
+  "seed": 42,
+  "n_merchants": 800,
+  "fake_ratio": 0.2,
+  "hard_neg_ratio": 0.18,
+  "window_days": 90,
+  "history_days": 365,
+  "split_date": "2026-06-01",
+  "missing_flow_ratio": 0.04,
+  "intensity": {
+    "低": {
+      "mult": 0.12,
+      "amt_jit": 0.06,
+      "gap_jit": 0.45,
+      "night_ratio": 0.3,
+      "round_lvl": 0.55
+    },
+    "中": {
+      "mult": 0.45,
+      "amt_jit": 0.02,
+      "gap_jit": 0.18,
+      "night_ratio": 0.75,
+      "round_lvl": 0.85
+    },
+    "高": {
+      "mult": 1.15,
+      "amt_jit": 0.005,
+      "gap_jit": 0.07,
+      "night_ratio": 1.0,
+      "round_lvl": 1.0
+    }
+  },
+  "industries": {
+    "电商零售": {
+      "lam": 3.5,
+      "pool": 160,
+      "night": 0.01,
+      "wkend": 1.18,
+      "sku": 90,
+      "sigma": 0.75,
+      "mean_amt": 235.1,
+      "med_amt": 177.46279042761563,
+      "growth": 0.043
+    },
+    "批发供货": {
+      "lam": 1.2,
+      "pool": 35,
+      "night": 0.004,
+      "wkend": 0.45,
+      "sku": 45,
+      "sigma": 0.9,
+      "mean_amt": 798.7,
+      "med_amt": 532.7143788326634,
+      "growth": 0.02
+    },
+    "餐饮服务": {
+      "lam": 6.0,
+      "pool": 120,
+      "night": 0.02,
+      "wkend": 1.35,
+      "sku": 60,
+      "sigma": 0.55,
+      "mean_amt": 61.4,
+      "med_amt": 52.78145168519609,
+      "growth": 0.024
+    },
+    "生活服务": {
+      "lam": 2.4,
+      "pool": 90,
+      "night": 0.008,
+      "wkend": 1.25,
+      "sku": 40,
+      "sigma": 0.7,
+      "mean_amt": 169.0,
+      "med_amt": 132.27706696287572,
+      "growth": 0.030999999999999996
+    }
+  }
+}

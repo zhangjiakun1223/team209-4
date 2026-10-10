@@ -1,0 +1,173 @@
+{
+  "fairness": {
+    "行业": {
+      "groups": [
+        {
+          "group": "批发供货",
+          "n": 52,
+          "n_compliant": 38,
+          "n_fraud": 14,
+          "false_flag_rate": 0.0789,
+          "fraud_recall": 0.9286
+        },
+        {
+          "group": "生活服务",
+          "n": 56,
+          "n_compliant": 45,
+          "n_fraud": 11,
+          "false_flag_rate": 0.0889,
+          "fraud_recall": 0.9091
+        },
+        {
+          "group": "电商零售",
+          "n": 100,
+          "n_compliant": 71,
+          "n_fraud": 29,
+          "false_flag_rate": 0.0845,
+          "fraud_recall": 0.7586
+        },
+        {
+          "group": "餐饮服务",
+          "n": 82,
+          "n_compliant": 67,
+          "n_fraud": 15,
+          "false_flag_rate": 0.1194,
+          "fraud_recall": 0.9333
+        }
+      ],
+      "chi2_p_value": 0.876,
+      "contingency": [
+        [
+          35,
+          3
+        ],
+        [
+          41,
+          4
+        ],
+        [
+          65,
+          6
+        ],
+        [
+          59,
+          8
+        ]
+      ]
+    },
+    "城市层级": {
+      "groups": [
+        {
+          "group": "一线",
+          "n": 54,
+          "n_compliant": 40,
+          "n_fraud": 14,
+          "false_flag_rate": 0.075,
+          "fraud_recall": 0.8571
+        },
+        {
+          "group": "三线及以下",
+          "n": 67,
+          "n_compliant": 51,
+          "n_fraud": 16,
+          "false_flag_rate": 0.098,
+          "fraud_recall": 0.875
+        },
+        {
+          "group": "二线",
+          "n": 81,
+          "n_compliant": 58,
+          "n_fraud": 23,
+          "false_flag_rate": 0.1034,
+          "fraud_recall": 0.7826
+        },
+        {
+          "group": "新一线",
+          "n": 88,
+          "n_compliant": 72,
+          "n_fraud": 16,
+          "false_flag_rate": 0.0972,
+          "fraud_recall": 0.9375
+        }
+      ],
+      "chi2_p_value": 0.9702,
+      "contingency": [
+        [
+          37,
+          3
+        ],
+        [
+          46,
+          5
+        ],
+        [
+          52,
+          6
+        ],
+        [
+          65,
+          7
+        ]
+      ]
+    }
+  },
+  "sensitivity": {
+    "excess_total_w": 256.3,
+    "pd_grid": [
+      0.05,
+      0.06,
+      0.08,
+      0.1,
+      0.12
+    ],
+    "lgd_grid": [
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8
+    ],
+    "reduction_grid_w": [
+      [
+        5.1,
+        6.4,
+        7.7,
+        9.0,
+        10.3
+      ],
+      [
+        6.2,
+        7.7,
+        9.2,
+        10.8,
+        12.3
+      ],
+      [
+        8.2,
+        10.3,
+        12.3,
+        14.4,
+        16.4
+      ],
+      [
+        10.3,
+        12.8,
+        15.4,
+        17.9,
+        20.5
+      ],
+      [
+        12.3,
+        15.4,
+        18.5,
+        21.5,
+        24.6
+      ]
+    ],
+    "limit_factor_sensitivity_w": {
+      "1.0": 170.9,
+      "1.5": 256.3,
+      "2.0": 341.8
+    }
+  }
+}

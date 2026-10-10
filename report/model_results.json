@@ -1,0 +1,377 @@
+{
+  "feature_cn": {
+    "win_orders": "窗口订单量",
+    "win_gmv": "窗口GMV",
+    "win_active_days": "有效经营天数",
+    "orders_per_active_day": "日均活跃订单量",
+    "season_factor": "窗口季节因子",
+    "order_growth": "订单量同口径环比",
+    "gmv_growth": "GMV同口径环比",
+    "win_gmv_share_of_year": "窗口GMV占全年比重",
+    "n_customers": "窗口客户数",
+    "orders_per_customer": "客均订单量",
+    "cust_hhi": "客户订单集中度HHI",
+    "top5_cust_share": "前5大客户订单占比",
+    "new_cust_share": "新客订单占比",
+    "oneshot_new_share": "一次性新客订单占比",
+    "new_cust_big_share": "新客大额订单占比",
+    "amt_mean": "平均订单金额",
+    "amt_median": "订单金额中位数",
+    "amt_cv": "订单金额变异系数",
+    "big_order_share": "大额订单占比(≥3000元)",
+    "round100_share": "百元整数金额占比",
+    "round1000_share": "千元整数金额占比",
+    "dup_amt_share": "重复金额订单占比",
+    "big_round_count": "整数大额订单笔数",
+    "max_order_amount": "窗口最大单笔金额",
+    "amt_entropy": "金额分布熵",
+    "night_share": "凌晨(0-6时)订单占比",
+    "weekend_share": "周末订单占比",
+    "hour_entropy": "时段分布熵",
+    "iat_cv": "订单间隔变异系数",
+    "burst_share": "秒级批量订单占比",
+    "batch_interval_regularity": "批量下单间隔规律度",
+    "max_daily_share": "单日峰值订单占比",
+    "daily_cv": "日订单量波动系数",
+    "sku_hhi": "商品集中度HHI",
+    "top_sku_share": "头部商品订单占比",
+    "channel_hhi": "渠道集中度HHI",
+    "flow_in_total": "窗口进账总额",
+    "flow_out_total": "窗口出账总额",
+    "flow_to_gmv_ratio": "进账/订单收入比",
+    "net_inflow_ratio": "净流入率",
+    "round_transfer_share": "千元整数转账占比",
+    "flow_cp_count": "资金对手方数量",
+    "flow_cp_hhi": "资金对手方集中度",
+    "same_day_pair_rate": "当日进出配对率",
+    "big_same_day_pair_rate": "大额当日进出配对率"
+  },
+  "cv_auc_mean": 0.8911,
+  "cv_auc_std": 0.0506,
+  "models": {
+    "逻辑回归": {
+      "test": {
+        "auc": 0.9284,
+        "ks": 0.8216,
+        "pr_auc": 0.9082
+      },
+      "train": {
+        "auc": 0.9382,
+        "ks": 0.8234,
+        "pr_auc": 0.9088
+      },
+      "top20pct_test": {
+        "k": 58,
+        "recall": 0.8261,
+        "precision": 0.9828,
+        "lift": 4.13
+      }
+    },
+    "随机森林": {
+      "test": {
+        "auc": 0.9036,
+        "ks": 0.7935,
+        "pr_auc": 0.8928
+      },
+      "train": {
+        "auc": 1.0,
+        "ks": 1.0,
+        "pr_auc": 1.0
+      },
+      "top20pct_test": {
+        "k": 58,
+        "recall": 0.7971,
+        "precision": 0.9483,
+        "lift": 3.99
+      }
+    },
+    "LightGBM": {
+      "test": {
+        "auc": 0.9341,
+        "ks": 0.808,
+        "pr_auc": 0.9096
+      },
+      "train": {
+        "auc": 1.0,
+        "ks": 1.0,
+        "pr_auc": 1.0
+      },
+      "top20pct_test": {
+        "k": 58,
+        "recall": 0.8116,
+        "precision": 0.9655,
+        "lift": 4.06
+      }
+    },
+    "孤立森林(无监督)": {
+      "test": {
+        "auc": 0.7665,
+        "ks": 0.4169,
+        "pr_auc": 0.5658
+      },
+      "train": null,
+      "top20pct_test": {
+        "k": 58,
+        "recall": 0.4638,
+        "precision": 0.5517,
+        "lift": 2.32
+      }
+    },
+    "融合评分": {
+      "test": {
+        "auc": 0.9293,
+        "ks": 0.817,
+        "pr_auc": 0.9098
+      },
+      "train": {
+        "auc": 0.9887,
+        "ks": 0.8956,
+        "pr_auc": 0.9683
+      },
+      "top20pct_test": {
+        "k": 58,
+        "recall": 0.8261,
+        "precision": 0.9828,
+        "lift": 4.13
+      }
+    }
+  },
+  "threshold_rule": {
+    "score_strategy": {
+      "threshold": 0.1576,
+      "tp": 59,
+      "fp": 21,
+      "fn": 10,
+      "tn": 200,
+      "flagged_n": 80,
+      "flagged_share": 0.2759,
+      "test_fpr": 0.095,
+      "test_recall": 0.8551,
+      "precision": 0.7375
+    },
+    "rank_strategy": {
+      "cut": 0.158,
+      "tp": 59,
+      "fp": 21,
+      "fn": 10,
+      "tn": 200,
+      "flagged_n": 80,
+      "flagged_share": 0.2759,
+      "test_fpr": 0.095,
+      "test_recall": 0.8551,
+      "precision": 0.7375
+    }
+  },
+  "level_table": [
+    {
+      "level": "低风险",
+      "商户数": 145,
+      "非规范数": 6,
+      "命中率": 0.0414,
+      "覆盖率": 0.087
+    },
+    {
+      "level": "关注",
+      "商户数": 87,
+      "非规范数": 6,
+      "命中率": 0.069,
+      "覆盖率": 0.087
+    },
+    {
+      "level": "中风险",
+      "商户数": 29,
+      "非规范数": 28,
+      "命中率": 0.9655,
+      "覆盖率": 0.4058
+    },
+    {
+      "level": "高风险",
+      "商户数": 20,
+      "非规范数": 20,
+      "命中率": 1.0,
+      "覆盖率": 0.2899
+    },
+    {
+      "level": "极高风险",
+      "商户数": 9,
+      "非规范数": 9,
+      "命中率": 1.0,
+      "覆盖率": 0.1304
+    }
+  ],
+  "robustness": {
+    "by_mode_flag_rate": {
+      "刷单": 0.8571,
+      "虚构交易": 0.8571,
+      "伪造流水": 0.9744
+    },
+    "by_intensity_flag_rate": {
+      "低": 0.7857,
+      "中": 0.8378,
+      "高": 0.9444
+    },
+    "hard_negative_n": 45,
+    "hard_negative_flag_rate": 0.0222,
+    "normal_flag_rate": 0.1136,
+    "visible_fraud_recall": 1.0,
+    "invisible_fraud_recall": 0.0909,
+    "hn_flag_rate_by_type": {
+      "夜间经营型": 0.0,
+      "批发大额整数型": 0.0,
+      "整数结算型": 0.0,
+      "直播促销型": 0.0667
+    }
+  },
+  "shap_top": {
+    "flow_cp_count": 0.8887,
+    "gmv_growth": 0.563,
+    "max_order_amount": 0.3724,
+    "top_sku_share": 0.3461,
+    "dup_amt_share": 0.3301,
+    "flow_to_gmv_ratio": 0.3004,
+    "burst_share": 0.2927,
+    "amt_cv": 0.2797,
+    "flow_cp_hhi": 0.2644,
+    "flow_in_total": 0.1847,
+    "same_day_pair_rate": 0.1786,
+    "sku_hhi": 0.1706,
+    "oneshot_new_share": 0.1681,
+    "net_inflow_ratio": 0.1623,
+    "win_active_days": 0.1564
+  },
+  "n_features": 45,
+  "lgb_best_params": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "num_leaves": 7,
+    "min_child_samples": 10,
+    "subsample": 0.85,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.7,
+    "reg_lambda": 2.0,
+    "random_state": 42
+  },
+  "lgb_search_log": [
+    [
+      7,
+      0.02,
+      10,
+      0.9079
+    ],
+    [
+      7,
+      0.02,
+      25,
+      0.9055
+    ],
+    [
+      7,
+      0.05,
+      10,
+      0.9082
+    ],
+    [
+      7,
+      0.05,
+      25,
+      0.9036
+    ],
+    [
+      7,
+      0.08,
+      10,
+      0.9011
+    ],
+    [
+      7,
+      0.08,
+      25,
+      0.9041
+    ],
+    [
+      15,
+      0.02,
+      10,
+      0.9065
+    ],
+    [
+      15,
+      0.02,
+      25,
+      0.9035
+    ],
+    [
+      15,
+      0.05,
+      10,
+      0.9061
+    ],
+    [
+      15,
+      0.05,
+      25,
+      0.9065
+    ],
+    [
+      15,
+      0.08,
+      10,
+      0.9032
+    ],
+    [
+      15,
+      0.08,
+      25,
+      0.9005
+    ],
+    [
+      31,
+      0.02,
+      10,
+      0.9074
+    ],
+    [
+      31,
+      0.02,
+      25,
+      0.9035
+    ],
+    [
+      31,
+      0.05,
+      10,
+      0.9074
+    ],
+    [
+      31,
+      0.05,
+      25,
+      0.9065
+    ],
+    [
+      31,
+      0.08,
+      10,
+      0.9011
+    ],
+    [
+      31,
+      0.08,
+      25,
+      0.9005
+    ]
+  ],
+  "primary_model": "逻辑回归（主评分）；LightGBM 用于 SHAP 归因",
+  "univariate_auc_top": {
+    "gmv_growth": 0.7971,
+    "win_gmv_share_of_year": 0.7794,
+    "flow_cp_count": 0.7519,
+    "top_sku_share": 0.7235,
+    "same_day_pair_rate": 0.721,
+    "burst_share": 0.706,
+    "orders_per_customer": 0.696,
+    "sku_hhi": 0.6955,
+    "order_growth": 0.6954,
+    "amt_cv": 0.691
+  }
+}
